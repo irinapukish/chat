@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChatApp.Views.LoginRegisterPage" BackgroundColor="LightBlue">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Margin="50,150,50,0">
+            <Label Text="Username" FontSize="Large" />
+            <Entry x:Name="usernameInput" Text="iryna"/>
+            <Label Text="Password" FontSize="Large" />
+            <Entry x:Name="passwordInput" IsPassword="True" Text="123"/>
+            <Button Text="Login or register" BackgroundColor="#90B1EE" Clicked="LoginRegister_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

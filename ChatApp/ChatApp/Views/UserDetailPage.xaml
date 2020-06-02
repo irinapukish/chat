@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="{Binding Title}"
+             x:Class="ChatApp.Views.UserDetailPage">
+    <RefreshView IsRefreshing="{Binding IsBusy, Mode=TwoWay}" Command="{Binding LoadUserCommand}">
+        <StackLayout>
+            <Image x:Name="AvatarImage"
+                   Source="{Binding UserAvatar}"
+                    VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="UserName"
+                   Text="{Binding UserName}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="UserBio"
+                     Text="{Binding UserBio}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="CreateChatButton" Clicked="CreateChatClick" Text="Send message" BackgroundColor="LightBlue"></Button>
+        </StackLayout>
+    </RefreshView>
+</ContentPage>
